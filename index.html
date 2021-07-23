@@ -1,77 +1,81 @@
-﻿</html>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Blackjack in Javascript</title>
-    <script type="text/javascript" src="js/Card.js"></script>
-    <script type="text/javascript" src="js/DisplayedCard.js"></script>
-    <script type="text/javascript" src="js/prototype.js"></script>
-    <script type="text/javascript" src="js/scriptaculous.js"></script>
-    <script type="text/javascript" src="js/effects.js"></script>
-    <script type="text/javascript" src="js/main-script.js"></script>
+    <script type="text/javascript" src="js/Card.min.js"></script>
+    <script type="text/javascript" src="js/DisplayedCard.min.js"></script>
+    <script type="text/javascript" src="js/prototype.min.js"></script>
+    <script type="text/javascript" src="js/scriptaculous.min.js"></script>
+    <script type="text/javascript" src="js/effects.min.js"></script>
+    <script type="text/javascript" src="js/main-script.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <table cellspacing="10" cellpadding="0" border="0;" align="center">
-        <tbody><tr><td>
-            <div style="position: relative; border: thick solid #660; background-color: #280; width: 579px; height:500px">
-                <div style="position: absolute; left:20px; top:15px; color:#9F9; font-size:large">Dealer's cards:</div>
-                <div id="dealer1" style="position: absolute; left: 50px; top: 50px; border: 2px solid rgb(102, 102, 0); background-color: rgb(102, 102, 0); width: 79px; height: 123px;">
-                    <div style="position: relative; width: 79px; height: 123px; left: 0px; top: 0px; display: none;">
-                        <img src="cards.png" style="position: absolute; width: 1027px; height: 615px; left: -158px; top: -492px; clip: rect(492px, 237px, 615px, 158px);"></div>
+    <div class="container">
+        <div class="bj__wrapper">
+            <div class="bj__title  title-dealer">Dealer's cards:</div>
+                <div class="bj__top">
+                    <div class="bj__card-holder__container" id="dealer1">
+
                     </div>
-                <div id="dealer2" style="position: absolute; left: 150px; top: 50px; border: 2px solid rgb(102, 102, 0); background-color: rgb(102, 102, 0); width: 79px; height: 123px;">
-                    <div style="position: relative; width: 79px; height: 123px; left: 0px; top: 0px; display: none;">
-                        <img src="cards.png" style="position: absolute; width: 1027px; height: 615px; left: -158px; top: -492px; clip: rect(492px, 237px, 615px, 158px);"></div>
+                    <div class="bj__card-holder__container" id="dealer2">
+                                
                     </div>
-                <div id="dealer3" style="position: absolute; left: 250px; top: 50px; border: 2px solid rgb(102, 102, 0); background-color: rgb(102, 102, 0); width: 79px; height: 123px;">
-                    <div style="position: relative; width: 79px; height: 123px; left: 0px; top: 0px; display: none;">
-                        <img src="cards.png" style="position: absolute; width: 1027px; height: 615px; left: -158px; top: -492px; clip: rect(492px, 237px, 615px, 158px);"></div>
+                    <div class="bj__card-holder__container" id="dealer3">
+        
                     </div>
-                <div id="dealer4" style="position: absolute; left: 350px; top: 50px; border: 2px solid rgb(102, 102, 0); background-color: rgb(102, 102, 0); width: 79px; height: 123px;">
-                    <div style="position: relative; width: 79px; height: 123px; left: 0px; top: 0px; display: none;">
-                        <img src="cards.png" style="position: absolute; width: 1027px; height: 615px; left: -158px; top: -492px; clip: rect(492px, 237px, 615px, 158px);"></div>
+                    <div class="bj__card-holder__container" id="dealer4">
+
                     </div>
-                <div id="dealer5" style="position: absolute; left: 450px; top: 50px; border: 2px solid rgb(102, 102, 0); background-color: rgb(102, 102, 0); width: 79px; height: 123px;">
-                    <div style="position: relative; width: 79px; height: 123px; left: 0px; top: 0px; display: none;">
-                        <img src="cards.png" style="position: absolute; width: 1027px; height: 615px; left: -158px; top: -492px; clip: rect(492px, 237px, 615px, 158px);"></div>
+                    <div class="bj__card-holder__container" id="dealer5">
+
                     </div>
-                <div style="position: absolute; left:20px; top:210px; color:#9F9; font-size:large">Your cards:</div>
-                <div id="player1" style="position: absolute; left: 50px; top: 250px; border: 2px solid rgb(102, 102, 0); background-color: rgb(102, 102, 0); width: 79px; height: 123px;">
-                    <div style="position: relative; width: 79px; height: 123px; left: 0px; top: 0px; display: none;">
-                        <img src="cards.png" style="position: absolute; width: 1027px; height: 615px; left: -158px; top: -492px; clip: rect(492px, 237px, 615px, 158px);"></div>
+                </div>
+            <div class="bj__title  title-cards">Your cards:</div>
+                <div class="bj__bottom">
+                    <div class="bj__card-holder__container" id="player1">
+
                     </div>
-                <div id="player2" style="position: absolute; left: 150px; top: 250px; border: 2px solid rgb(102, 102, 0); background-color: rgb(102, 102, 0); width: 79px; height: 123px;">
-                    <div style="position: relative; width: 79px; height: 123px; left: 0px; top: 0px; display: none;">
-                        <img src="cards.png" style="position: absolute; width: 1027px; height: 615px; left: -158px; top: -492px; clip: rect(492px, 237px, 615px, 158px);"></div>
+                    <div class="bj__card-holder__container" id="player2">
+
                     </div>
-                <div id="player3" style="position: absolute; left: 250px; top: 250px; border: 2px solid rgb(102, 102, 0); background-color: rgb(102, 102, 0); width: 79px; height: 123px;">
-                    <div style="position: relative; width: 79px; height: 123px; left: 0px; top: 0px; display: none;">
-                        <img src="cards.png" style="position: absolute; width: 1027px; height: 615px; left: -158px; top: -492px; clip: rect(492px, 237px, 615px, 158px);"></div>
+                    <div class="bj__card-holder__container" id="player3">
+
                     </div>
-                <div id="player4" style="position: absolute; left: 350px; top: 250px; border: 2px solid rgb(102, 102, 0); background-color: rgb(102, 102, 0); width: 79px; height: 123px;">
-                    <div style="position: relative; width: 79px; height: 123px; left: 0px; top: 0px; display: none;">
-                        <img src="cards.png" style="position: absolute; width: 1027px; height: 615px; left: -158px; top: -492px; clip: rect(492px, 237px, 615px, 158px);"></div>
+                    <div class="bj__card-holder__container" id="player4">
+
                     </div>
-                <div id="player5" style="position: absolute; left: 450px; top: 250px; border: 2px solid rgb(102, 102, 0); background-color: rgb(102, 102, 0); width: 79px; height: 123px;">
-                    <div style="position: relative; width: 79px; height: 123px; left: 0px; top: 0px; display: none;">
-                        <img src="cards.png" style="position: absolute; width: 1027px; height: 615px; left: -158px; top: -492px; clip: rect(492px, 237px, 615px, 158px);"></div>
+                    <div class="bj__card-holder__container" id="player5">
+
                     </div>
-                <div style="position: absolute; left:20px; top: 410px; color:#9F9; font-size:large">You have:</div>
-                <div id="money" style="position: absolute; left: 70px; top:445px; color:yellow; font-size:x-large">$100</div>
-                <div id="betdiv" style="position:absolute; left:300px; top:425px">
-                <span style="color:#9F9">Your bet:</span>&nbsp; <input type="text" size="6" id="bet">
+                </div>
+                <div class="bj__info">
+                    <div class="moneydiv">
+                        <div class="title-you">You have:</div>
+                        <div class="money" id="money">
+                            
+                        </div>
+                    </div>
+
+                    <div class="betdiv" id="betdiv">
+                        <div class="title-bet">Your bet:</div>
+                        <input class="bet-input__custom" type="text" size="6" id="bet">
+                    </div>
+                </div>
+        </div>
+        <div class="btn__wrapper">
+            <div class="btn__container">
+                <input class="btn-btn  btn-new" type="button" id="newGameButton" value="New Game" onclick="startGame()">
+                <div class="btn__control">
+                    <input class="btn-btn  btn-hit" type="button" id="hitButton" value="Hit" onclick="hit()" disabled="">
+                    <input class="btn-btn  btn-stand" type="button" id="standButton" value="Stand" onclick="stand()" disabled="">
                 </div>
             </div>
-            </td></tr>
-        <tr><td align="center">
-        <input type="button" id="hitButton" value="Hit" onclick="hit()" disabled="">
-        <input type="button" id="standButton" value="Stand" onclick="stand()" disabled="">
-        <input type="button" id="newGameButton" value="New Game" onclick="startGame()">
-        </td></tr>
-        <tr><td align="center">
-        <span id="message" style="color:#600; font-weight:bold">Welcome to Blackjack!<br>Click "New Game" to Begin.</span>
-        </td></tr>
-        </tbody>
-    </table>
+            <span id="message"><br></span>
+        </div>
+    </div>
 </body>
 </html>
