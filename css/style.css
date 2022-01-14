@@ -1,0 +1,137 @@
+body {
+    font-family: "Exo 2", sans-serif;
+    background-color: #000;
+}
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+.bj__wrapper {
+    background: url(../bg.jpg);
+    padding: 10px;
+    padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+}
+.bj__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.bj__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.bj__bottom .bj__card-holder__container {
+    margin-right: 80px;
+}
+.bj__bottom .bj__card-holder__container:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-right: 50px;
+    margin-top: 15px;
+}
+.bj__bottom .bj__card-holder__container:nth-child(2) {
+    margin-top: 100px;
+    -webkit-transform: rotate(27deg);
+    -ms-transform: rotate(27deg);
+    transform: rotate(27deg);
+}
+.bj__bottom .bj__card-holder__container:nth-child(3) {
+    margin-top: 135px;
+}
+.bj__bottom .bj__card-holder__container:nth-child(4) {
+    margin-top: 100px;
+    -webkit-transform: rotate(-27deg);
+    -ms-transform: rotate(-27deg);
+    transform: rotate(-27deg);
+    margin-right: 50px;
+}
+.bj__bottom .bj__card-holder__container:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: 15px;
+}
+.bj__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+}
+.bj__info .money {
+    color: #fff;
+    font-weight: 800;
+    font-size: 30px;
+}
+.bj__card-holder__container {
+    width: 79px;
+    height: 123px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.bj__card-holder__container:last-child {
+    margin: 0;
+}
+.bj__title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.btn__wrapper {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+.btn__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.btn-btn {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: 600;
+    padding: 4px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.btn-new {
+    margin-right: 20px;
+}
+.title-you {
+    text-align: inherit;
+}
+.bet-input__custom {
+    background: none;
+    border: none;
+    color: #fff;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    width: 80px;
+}
